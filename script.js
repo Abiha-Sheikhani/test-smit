@@ -136,7 +136,11 @@ loginBtn &&
   loginBtn.addEventListener("click", async () => {
     try {
       if (!loginEmail.value || !loginPassword.value) {
-        alert("Please enter all fields!");
+      Swal.fire({
+        title: `please enter all fields!`,
+        icon: "error",
+        timer: 2000,
+      });
         return; // Stop further execution
       }
 
@@ -146,8 +150,12 @@ loginBtn &&
       });
 
       if (error) {
-        alert("Login failed!");
-        console.log(error.message);
+       Swal.fire({
+        title: `Login failed!`,
+        description: error.message,
+        icon: "error",
+        timer: 2000,
+      });
         return;
       }
  else {
