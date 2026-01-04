@@ -160,7 +160,7 @@ loginBtn &&
         loginEmail.value = ""
         loginPassword.value = ""
         setTimeout(()=>{
-     window.location = "user.html"
+     window.location = "post.html"
         },2000)
 
      console.log(data);
